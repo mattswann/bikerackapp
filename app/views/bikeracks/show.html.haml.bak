@@ -1,0 +1,44 @@
+%h1 Show rack
+%p Bike Rack Address
+- @search_result.each do |sr|
+  %p= sr.address
+#show-wrapper
+  #map-wrapper
+    #pano
+    #map-canvas
+    .info-box
+      %h2 Bike Rack Info
+      %p Location Details:
+      %p= @brack.address
+      %h3 Give Feedback regarding the facilities
+      = form_for Feedback.new do |f|
+        %p
+          = f.label :feedback
+          = f.text_area :feedback
+        %p
+          = f.label :site
+          = f.select :site, Feedback.site
+        = f.hidden_field :bike_racks_id, :value => @brack.id
+        %button SUBMIT
+  
+  :javascript
+    function initialize() {
+      var fenway = new google.maps.LatLng( @brack.latitude ,  @brack.longitude );
+      var mapOptions = {
+      center: fenway,
+      zoom: 14
+    };
+  var map = new google.maps.Map(
+      document.getElementById('map-canvas'), mapOptions);
+  var panoramaOptions = {
+    position: fenway,
+    pov: {
+      heading: 34,
+      pitch: 10
+    }
+  };
+  var panorama = new google.maps.StreetViewPanorama(document.getElementById('pano'), panoramaOptions);
+  map.setStreetView(panorama);
+}
+
+google.maps.event.addDomListener(window, 'load', initialize);

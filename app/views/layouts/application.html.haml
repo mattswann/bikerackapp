@@ -26,11 +26,7 @@
         %li.active
           %a{:href => "/"} HOME
         %li
-          %a{:href => "/nearme"} NEAR ME
-        %li
           %a{:href => "/bikeracks"} BIKE RACKS
-        %li
-          %a{:href => "#"} USER PROFILE
         %li
           %a{:href => "/faq"} FAQ
         %li
@@ -45,9 +41,8 @@
             = link_to "Log out", destroy_user_session_path, method: :delete
         %p.notice= notice
         %p.alert= alert
-
-
-
-       
-
     = yield
+    %footer
+      %span.footer copyright BFA Industries 2014
+
+

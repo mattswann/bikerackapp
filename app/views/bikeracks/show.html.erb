@@ -1,30 +1,66 @@
-<h1>Show rack</h1>
 
-
-<p>Bike Rack Address</p>
 
 <% @search_result.each do |sr| %>
 <p><%= sr.address %></p>
 <% end %>
 
-<div id="show-wrapper">
-	<div id="map-wrapper">
-		<div id="map-canvas"></div>
-		<div id="pano"></div>
-	</div>
-	<div id="info-wrapper">
-		<div class="info-box">
+<div id="container">
+  <div id="map-wrapper">
+      
+  <div class="info-box">
+    <h2>Bike Rack Info</h2>
+    <p>Location Details:  </p>
+    <p><%= @brack.address %></p>
+    <h3>Give Feedback regarding the facilities</h3>
+    <%= form_for Feedback.new do |f| %>
+    <p>
+    <%= f.text_area :feedback, :id => "txtarea", :placeholder => "Feedback" %>
+    </p>
+    <p>
+    <%= f.label :site, "Bike Rack site has"  %>
+    <%= f.select :site, Feedback.site %>
+    </p>
+    <%= f.hidden_field :bike_racks_id, :value => @brack.id %>
+    <button>SUBMIT</button>
+    <% end %>
+    <br />
+    <p>Other users have said this about this Bike Rack...</p>
 
-		<h2>Bike Rack Info</h2>
-			<p>Location Details:	</p>
-			<p><%= @brack.address %></p>
+    <% @feedback.each do |fb| %>
+    <p> <%= fb.feedback %> rack also has,<%= fb.site %></p>
+     
 
-		<h3>Give Feedback regarding the facilities</h3>
+    <p><%= link_to 'Delete', fb, :method => :delete, :data => {:confirm => 'delete feedback?'} %> | <%= link_to 'Edit', edit_feedback_path(fb) %>
+    </p>
+    <% end %>
 
-
-		</div>
-	</div>
+    </div>
+    <div id="map-canvas"></div>
+    <div id="pano"></div>
+  </div>
 </div>
+
+
+
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 <script>
