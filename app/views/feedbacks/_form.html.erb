@@ -1,0 +1,12 @@
+<%= form_for @feedback do |f| %>
+<p>
+	<%= f.label :feedback  %>
+	<%= f.text_area :feedback %>
+</p>
+<p>
+	<%= f.label :site %>
+	<%= f.select :site, Feedback.site %>
+</p>
+
+<button>SUBMIT</button>
+<% end %>

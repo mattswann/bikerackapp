@@ -1,0 +1,16 @@
+
+<p>Add Feedback</p>
+
+
+<% @search_result.each do |sr| %>
+<p><%= sr.address %></p>
+<% end %>
+
+<%= form_for @feedback do |f| %>
+<p>
+	<%= f.lable :site %>
+	<%= f.select :site %>
+</p>
+
+<button>SUBMIT</button>
+<% end %>

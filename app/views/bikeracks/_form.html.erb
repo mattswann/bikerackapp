@@ -1,0 +1,23 @@
+<%= form_for @bikerack do |f| %>
+	
+	<p>
+		<%= f.label :location %>
+		<%= f.text_field :location %>
+	</p>
+
+	<p>
+	<%= f.label :user_rating %>
+	<%= f.select :user_rating, Bikerack.user_rating %>Stars
+	</p>
+	<p>
+	<%= f.label :feedback %>
+	<%= f.text_area :feedback %>
+	</p>
+	<p>
+	<%= f.label :image %>
+	<%= f.text_field :image %>
+	</p>
+
+<button>GO</button>
+
+<% end %>

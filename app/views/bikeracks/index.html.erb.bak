@@ -1,0 +1,27 @@
+<h1>Bike Rack Index</h1>
+
+
+
+	<%= form_tag bikeracks_path, :method => 'get' do %>
+    <p>
+      <%= text_field_tag :search, params[:search], :class => "textfield-search" %>
+      <%= submit_tag "Search", :name => nil, :class => "search-button" %>
+    </p>
+  <% end %>
+<br />
+<br />
+<br />
+<p> Number of Results: <%= @search_result.count %></p>
+<% @search_result.each do |sr| %>
+<p> <%= sr.address  %></p>
+
+<% end %>
+
+
+
+<%- unless @lat_lng %>
+<script>
+  getGeoLocation();
+</script>
+<%- end %>
+
