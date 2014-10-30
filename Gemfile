@@ -38,7 +38,7 @@ gem 'haml'
 gem 'geocoder'
 gem 'soda-ruby'
 gem 'squeel'
-
+gem 'rails_12factor'
 
 
 
