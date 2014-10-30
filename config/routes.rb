@@ -15,6 +15,8 @@ post '/sign_up' => 'users#create'
 resources :bikeracks
 resources :users
 resources :feedbacks
+resources :faq
+resources :nearme
 
 
 
