@@ -20,16 +20,15 @@
     <%= f.label :site, "Bike Rack site has"  %>
     <%= f.select :site, Feedback.site %>
     </p>
-    <%= f.hidden_field :bike_racks_id, :value => @brack.id %>
+    <%= f.hidden_field :bike_rack_id, :value => @brack.id %>
     <button>SUBMIT</button>
     <% end %>
     <br />
     <p>Other users have said this about this Bike Rack...</p>
 
-    <% @feedback.each do |fb| %>
-    <p> <%= fb.feedback %> rack also has,<%= fb.site %></p>
-     
-
+    <% @feedbacks.each do |fb| %>
+    <p> <%= fb.feedback %> this rack also has, <%= fb.site %></p>
+  
     <p><%= link_to 'Delete', fb, :method => :delete, :data => {:confirm => 'delete feedback?'} %> | <%= link_to 'Edit', edit_feedback_path(fb) %>
     </p>
     <% end %>

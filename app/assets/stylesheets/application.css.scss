@@ -21,10 +21,15 @@ body {
  	max-width: 900px;
  	margin-left: auto;
  	margin-right: auto;
+ 	margin-top: 2%;
  	background-color: transparent;
-  -webkit-box-shadow: 10px 0 5px -2px #888;
-      box-shadow: 10px 0 5px -2px #888;
+  -webkit-box-shadow: 10px 10px 5px -2px #888;
+      box-shadow: 10px 10px 5px -2px #888;
   border-left: 2px solid #888;
+  border-top: 2px solid #888;
+  border-bottom: 2px solid #888;
+  border-right: 2px solid #888;
+
  }
 
 #container	{
@@ -62,6 +67,8 @@ body {
 .backg {
 	width: 100%;
 	height: 100%;
+	padding-top: 2em;
+	padding-bottom: 2em;
 }
 
 #txtarea {
@@ -70,22 +77,11 @@ body {
 }
 
 footer {
-	position: fixed;
 	bottom:0px;
 	margin-top: 2em;
+	padding-top: 1em;
 }
-/*
-#map-container {
-   height: 400px;
-   border-radius: 16px 16px;
-   border-color: #fff;
-   border-style: solid;
-   box-shadow: 2px 2px 10px #B1B1B1;
-   margin-top: 25px;
-   border-width: 7px;
- }
- #map-canvas {
-   height: 384px;
-   width: 100%;
- }*/
 
+.navbar-header {
+	margin-bottom: 4em;
+}

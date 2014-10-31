@@ -18,7 +18,7 @@ class BikeracksController < ApplicationController
 	def show
 		@brack = BikeRack.find(params[:id])
 		@search_result = BikeRack.where("address ilike ?", @result)
-		@feedback = Feedback.all
+		@feedbacks = @brack.feedbacks
 	end
 
 	

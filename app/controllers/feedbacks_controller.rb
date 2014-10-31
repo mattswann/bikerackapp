@@ -9,6 +9,7 @@ class FeedbacksController < ApplicationController
 	def show
 		@feedback = Feedback.find(params[:id])
 		@brack = BikeRack.all
+		raise
 	end
 
 	def update 
