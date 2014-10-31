@@ -6,22 +6,19 @@ application up and running.
 Things you may want to cover:
 
 * Ruby version
+This is made with rails '4.1.6'. Please review the gemfile for necessary System dependencies.
 
-* System dependencies
+Configuration has been attempted...
 
-* Configuration
+Database creation, correct. 
 
-* Database creation
+Database initialization, purple.
 
-* Database initialization
+How to run the test suite. You don't as you may break it.
 
-* How to run the test suite
+It uses google maps and street view api and I don't pay for it so don't run too many searches. 
 
-* Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
-
-* ...
 
 
 Please feel free to use a different markup language if you do not plan to run
