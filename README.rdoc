@@ -1,10 +1,10 @@
 Find it live @
 https://bikerackapp-proj1.herokuapp.com/
 
-Description
+Description:
 Due to the growing pressure on our transport network more and more people are using peddle power to get about. This is in turn creating more demand for secure places to chain up bicycles. Every city provides many bike rack facilities but what might be a safe secure place to lock your bike at 9am might be a scary and not so safe place once the sun goes down. Bike Rack allows users the opportunity to not only locate public facilities and get a Google Street View of the location well before they arrive but allow riders the chance to offer feedback for other users. Feedback like 'Bad lighting after dark', 'Nearby CCTV' and 'the rack gets really crowded' all assist riders in making the right decision about where to leave their prized possession.
 
-Features
+Features:
 Secure log in with devise
 Search for facilities in Melbourne city
 Comment on these facilities
@@ -13,18 +13,18 @@ Twitter feed for instant community updates
 More areas 
 Mobile version
 
-Technical
+Technical:
 Ruby on Rails
 PostgreSQL
 HTML5
 CSS3
 Gems include: devise, geocoder, oauth, haml, soda-ruby
 
-APIs
+APIs:
 Google API's - places, maps oauth
 City Of Melbourne data (https://data.melbourne.vic.gov.au/)
 
-Acknowledgements
+Acknowledgements:
 epoch
 lyntco
 
